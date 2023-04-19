@@ -57,13 +57,13 @@
                                         <input wire:model="image" type="file" class="form-control-file"
                                             id="image">
                                         {{-- @error('image')
-                                            <span class="invalid-feedback">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
+                                        <span class="invalid-feedback">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
                                         @enderror
 
                                         @if ($image)
-                                            <img src="{{ $image->temporaryUrl() }}" alt="" height="200">
+                                        <img src="{{ $image->temporaryUrl() }}" alt="" height="200">
                                         @endif --}}
                                     </div>
                                 </div>

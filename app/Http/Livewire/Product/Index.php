@@ -15,7 +15,8 @@ class Index extends Component
     public $formVisible;
 
     protected $listeners = [
-        'formClose' => 'formCloseHandler'
+        'formClose' => 'formCloseHandler',
+        'productStored' => 'productStoredHandler'
     ];
 
     protected $updatesQueryString = [
@@ -37,6 +38,11 @@ class Index extends Component
     }
 
     public function formCloseHandler()
+    {
+        $this->formVisible = false;
+    }
+
+    public function productStoredHandler()
     {
         $this->formVisible = false;
     }
