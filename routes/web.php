@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Product\Index;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::livewire('/admin/product', 'product.index')
+    ->name('admin.product')
+    ->middleware('auth');

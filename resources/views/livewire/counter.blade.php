@@ -1,5 +1,3 @@
 <div>
-    <button wire:click="increment">+</button>
-    <h1>{{ $count }}</h1>
-    <button wire:click="decrement">-</button>
+    <h1>Hello World</h1>
 </div>
