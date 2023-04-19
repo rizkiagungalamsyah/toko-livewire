@@ -10,10 +10,24 @@ class Index extends Component
 {
     use WithPagination;
 
+    public $paginate = 10;
+    public $search;
+
+    protected $updatesQueryString = [
+        ['search' => ['except' => '']],
+    ];
+
+    public function mount()
+    {
+        $this->search = request()->query('search', $this->search);
+    }
+
     public function render()
     {
         return view('livewire.product.index', [
-            'products' => Product::latest()->paginate(10)
+            'products' => $this->search === null ?
+                Product::latest()->paginate($this->paginate) :
+                Product::latest()->where('title', 'like', '%' . $this->search . '%')->paginate($this->paginate)
         ]);
     }
 }
