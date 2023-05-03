@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0f4b9f2c95198202f99f31dd8753675f",
+    "content-hash": "5ca22b2ab2075ae9742e7ea3c6087e22",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1206,16 +1206,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v1.2.0",
+            "version": "v1.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "874ba1b8d6b12efa472147697942fe2f78a5d371"
+                "reference": "b88d795f1c0accd0fd4b3cd42f4ebf4d9b1bb3bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/874ba1b8d6b12efa472147697942fe2f78a5d371",
-                "reference": "874ba1b8d6b12efa472147697942fe2f78a5d371",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/b88d795f1c0accd0fd4b3cd42f4ebf4d9b1bb3bd",
+                "reference": "b88d795f1c0accd0fd4b3cd42f4ebf4d9b1bb3bd",
                 "shasum": ""
             },
             "require": {
@@ -1259,13 +1259,17 @@
                 }
             ],
             "description": "A front-end framework for Laravel.",
+            "support": {
+                "issues": "https://github.com/livewire/livewire/issues",
+                "source": "https://github.com/livewire/livewire/tree/v1.3.9"
+            },
             "funding": [
                 {
                     "url": "https://github.com/calebporzio",
                     "type": "github"
                 }
             ],
-            "time": "2020-06-08T15:12:38+00:00"
+            "time": "2021-08-12T17:41:02+00:00"
         },
         {
             "name": "midtrans/midtrans-php",
@@ -6476,5 +6480,5 @@
         "php": "^7.2.5"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.3.0"
 }
