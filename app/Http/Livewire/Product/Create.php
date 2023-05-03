@@ -31,6 +31,8 @@ class Create extends Component
             'image' => 'image|max:3048'
         ]);
 
+        $imageName = '';
+
         if ($this->image) {
             $imageName = Str::slug($this->title, '-')
                 . '-'
@@ -38,15 +40,13 @@ class Create extends Component
                 . '.' . $this->image->getClientOriginalExtension();
 
             $this->image->storeAs('public', $imageName, 'local');
-
-            $this->image = $imageName;
         }
 
         Product::create([
             'title' => $this->title,
             'price' => $this->price,
             'description' => $this->description,
-            'image' => $this->image,
+            'image' => $imageName
         ]);
 
         // dd($this);
