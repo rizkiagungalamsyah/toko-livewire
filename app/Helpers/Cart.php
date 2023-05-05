@@ -6,7 +6,6 @@ use App\Product;
 
 class Cart
 {
-
     public function __construct()
     {
         if ($this->get() === null) {
@@ -21,7 +20,7 @@ class Cart
 
     public function get()
     {
-        request()->session()->get('cart');
+        return request()->session()->get('cart');
     }
 
     public function empty()
@@ -52,10 +51,8 @@ class Cart
             ),
             1
         );
-        $this->set('$cart');
+        $this->set($cart);
     }
-
-
 
     public function clear()
     {
