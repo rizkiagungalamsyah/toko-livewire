@@ -35,7 +35,8 @@ class Index extends Component
     {
         $product = Product::find($productId);
         Cart::add($product);
+        $this->emit('addToChart');
 
-        dd(Cart::get()['products']);
+        // dd(Cart::get()['products']);
     }
 }
