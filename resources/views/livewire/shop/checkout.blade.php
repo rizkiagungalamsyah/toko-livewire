@@ -115,6 +115,7 @@
                                         location.reload();
                                     }
                                 });
+                                window.livewire.emit('emptyCart');
                             });
                         </script>
                     @endif
