@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\Shop;
 
-use App\Facades\Cart as FacadeCart;
+use App\Facades\Cart as FacadesCart;
 use Livewire\Component;
 
 class Cart extends Component
@@ -11,7 +11,7 @@ class Cart extends Component
 
     public function mount()
     {
-        $this->cart = FacadeCart::get();
+        $this->cart = FacadesCart::get();
     }
 
     public function render()
@@ -21,8 +21,8 @@ class Cart extends Component
 
     public function removeFromCart($id)
     {
-        FacadeCart::remove($id);
-        $this->cart = FacadeCart::get();
+        FacadesCart::remove($id);
+        $this->cart = FacadesCart::get();
         $this->emit('removeFromCart');
     }
 }
